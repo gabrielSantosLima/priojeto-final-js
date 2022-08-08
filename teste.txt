@@ -1,0 +1,9 @@
+nome=Melinne
+idade=20
+cpf=111.222.333-45
+curso=Japones
+turno=Matutino
+numero=9885683
+bairro=Lago Azul
+rua=Comendador
+telefone=9348549

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matrícula curso de idiomas</title>
     <script src="upload.js" defer></script>
+    <script src="download.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -101,7 +102,7 @@
             type="button"
             value="Importar dados"
           />
-          <input class="button outlined" type="button" value="Fazer download" />
+          <input class="button outlined" id="buttonSaveFile" type="button" value="Fazer download" onclick="saveFile()" />
           <input type="file" id="fileUpload" accept="text/plain" />
           <input class="button primary" type="submit" value="Enviar" />
         </div>

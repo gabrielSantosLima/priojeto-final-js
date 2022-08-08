@@ -1,15 +1,147 @@
-<!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrícula curso de idiomas</title>
+    <script src="upload.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema de Gerenciamento de Alunos</title>
-</head>
+  <body>
+    <div id="root">
+      <form
+        name="CursoIdiomas"
+        class="form group"
+        method="post"
+        action="mailto:matricula@curso.pt"
+        onSubmit="return validar(document.CursoIdiomas)"
+      >
+        <h1 class="title">Matrícula no Curso Idiomas</h1>
+        <div class="inline-group">
+          <div class="item group">
+            <label class="item-title"
+              >Qual curso você deseja realizar matrícula?</label
+            >
+            <select class="item-select" name="curso">
+              <option disabled selected value></option>
+              <option>Alemão</option>
+              <option>Espanhol</option>
+              <option>Inglês</option>
+              <option>Japonês</option>
+            </select>
+          </div>
 
-<body>
+          <div class="item group">
+            <label class="item-title"
+              >Qual turno você quer realizar matrícula?</label
+            >
+            <select class="item-select" name="turno">
+              <option disabled selected value></option>
+              <option>Matutino</option>
+              <option>Vespertino</option>
+              <option>Noturno</option>
+            </select>
+          </div>
+        </div>
 
-</body>
+        <div class="group">
+          <strong>Dados para matricula: </strong>
 
+          <div class="item inline-group">
+            <label class="item-title">Nome:</label>
+            <input class="textfield" type="text" name="nome" size="40" />
+            <label class="item-title">Idade:</label>
+            <input class="textfield" type="number" name="idade" />
+          </div>
+
+          <div class="item inline-group">
+            <label class="item-title">Bairro: </label>
+            <input
+              class="textfield"
+              placeholder="Ex: Bairro Da Paz"
+              type="text"
+              name="bairro"
+              size="40"
+            />
+
+            <label class="item-title">Rua:</label>
+            <input
+              class="textfield"
+              placeholder="Ex: Rua Alecrim"
+              type="text"
+              name="rua"
+              size="40"
+            />
+
+            <label class="item-title">Número:</label>
+            <input class="textfield" type="number" name="número" />
+          </div>
+
+          <div class="item inline-group">
+            <label class="item-title">Telefone:</label>
+            <input
+              class="textfield"
+              placeholder="Ex: (DDD) 9XXXX-XXXX"
+              type="text"
+              name="telefone"
+            />
+          </div>
+        </div>
+
+        <div class="inline-group button-group">
+          <input
+            class="button outlined"
+            type="reset"
+            value="Limpar todos os campos"
+          />
+          <input
+            class="button outlined"
+            id="buttonUpload"
+            type="button"
+            value="Importar dados"
+          />
+          <input class="button outlined" type="button" value="Fazer download" />
+          <input type="file" id="fileUpload" accept="text/plain" />
+          <input class="button primary" type="submit" value="Enviar" />
+        </div>
+      </form>
+    </div>
+    <script language="JavaScript">
+      function validar(form) {
+        // Testa se o utilizador escolheu pelo menos um curso
+
+        if (
+          form.pmatricula.selectedIndex == 0 ||
+          form.quantp.selectedIndex == 0
+        ) {
+          window.alert("Tem que selecionar pelo menos um curso!");
+
+          return false;
+        } else {
+          // Testa se os dados para matricula estão preenchidos
+
+          var s = form.nome.value;
+          var s1 = form.bairro.value;
+          var s2 = form.rua.value;
+          var s3 = form.numero.value;
+          var s4 = form.telefone.value;
+
+          if (
+            s.length < 5 ||
+            s1.length < 6 ||
+            s2.length < 6 ||
+            s3.length < 6 ||
+            s4.length < 9
+          ) {
+            window.alert(
+              "preencha correctamente o seu Nome, Morada e Telefone"
+            );
+
+            return false;
+          }
+        }
+      }
+    </script>
+  </body>
 </html>

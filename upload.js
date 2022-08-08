@@ -1,5 +1,12 @@
 const uploadInput = document.getElementById("fileUpload");
+const uploadButton = document.getElementById("buttonUpload")
+
+uploadButton.addEventListener('click', startUpload)
 uploadInput.addEventListener("change", handleUpload, false);
+
+function startUpload(){
+    uploadInput.click()
+}
 
 function handleUpload() {
     const [upload] = this.files;
@@ -9,8 +16,8 @@ function handleUpload() {
     reader.readAsText(upload);
 }
 
-function parseFile(e) {
-    const reader = e.target;
+function parseFile(event) {
+    const reader = event.target;
     const parts = reader.result.split("\n");
 
     for(const part of parts) {

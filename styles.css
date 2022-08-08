@@ -1,0 +1,132 @@
+/* Default configurations */
+
+:root{
+    --primary-color: #d32f2f;
+    --text-primary: #FFF;
+    --default-background: rgb(244, 244, 244);
+    --element-background: #FFF;
+}
+
+#root, body, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--default-background);
+}
+
+*, input, textarea{
+    font-family: Tahoma, sans-serif;
+}
+
+button{
+    user-select: none;
+    background-color: transparent;
+}
+
+/* Set default fonts  */
+
+body{
+    font-size: 10pt;
+}
+
+h1, h2, h3{
+    color: var(--primary-color);
+}
+
+h1{
+    font-size: 24pt;
+}
+
+h2{
+    font-size: 18pt;
+}
+
+h3{
+    font-size: 14pt;
+}
+
+.primary{
+    border: 0;
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.primary:hover{
+    filter: brightness(90%);
+}
+
+.outlined{
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: #000;
+}
+
+.outlined:hover{
+    background-color: var(--primary-color);
+    color: #FFF;
+}
+
+/* Styling form elements */
+
+.form{
+    margin: 4% auto;
+    width: 70%;
+    height: 60%;
+    padding: 16px;
+    background-color: var(--element-background);
+    border-radius: 4px;
+    box-shadow: 0.4px 0.4px 4px 0.5px rgb(200, 200, 200);
+}
+
+.textfield, select{
+    border: 1px solid rgb(52, 43, 43);
+    border-radius: 2px;
+    padding: 8px 4px;
+}
+
+.textfield[type="number"]{
+    width: 80px;
+}
+
+#fileUpload[type="file"]{
+    display: none;
+}
+
+.group, .inline-group{
+    display: flex;
+    gap: 16px;
+}
+
+.group{
+    flex-direction: column;
+}
+
+.inline-group{
+    flex-direction: row;
+    align-items: center;
+}
+
+.item{
+    width: 30%;
+}
+
+.item .item-title{
+    font-size: 12pt;
+}
+
+.button-group{
+    margin-top: auto;
+    align-items: center;
+}
+
+.button-group .button:last-child{
+    margin-left: auto;
+}
+
+.button{
+    display: flex;
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}

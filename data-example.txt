@@ -1,0 +1,10 @@
+nome=Obi-Wan
+idade=34
+cpf=111.222.333-44
+curso=Japonês
+turno=Matutino
+número=01
+bairro=Alvorada
+rua=Loris Cordovil
+telefone=(92) 98888-7777
+

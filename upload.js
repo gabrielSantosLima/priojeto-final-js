@@ -18,7 +18,7 @@ function handleUpload() {
 
 function parseFile(event) {
     const reader = event.target;
-    const parts = reader.result.split("\n");
+    const parts = reader.result.split(/\r?\n/);
 
     for(const part of parts) {
         const [key, value] = part.split("=");

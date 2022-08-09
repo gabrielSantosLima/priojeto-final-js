@@ -55,6 +55,5 @@ function saveFile(pessoa)
     link.download = nomeArquivo
     link.style.display = "none"
     document.body.appendChild(link)
-
     link.click()
-    }
+}

@@ -87,6 +87,15 @@
               type="text"
               name="telefone"
             />
+
+            <div class="item inline-group">
+              <label class="item-title">Matrícula:</label>
+              <input
+                class="textfield"
+                placeholder="Ex: 210029512"
+                type="text"
+                name="matricula"
+              />
           </div>
         </div>
 
@@ -102,9 +111,9 @@
             type="button"
             value="Importar dados"
           />
-          <input class="button outlined" id="buttonSaveFile" type="button" value="Fazer download" onclick="saveFile()" />
+          <input class="button outlined" id="buttonSaveFile" type="button" value="Fazer download" onclick="downloadFile(this.form)" />
           <input type="file" id="fileUpload" accept="text/plain" />
-          <input class="button primary" type="submit" value="Enviar" />
+          <input class="button primary" type="submit" value="Enviar"/>
         </div>
       </form>
     </div>

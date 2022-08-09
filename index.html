@@ -7,6 +7,7 @@
     <script src="upload.js" defer></script>
     <script src="download.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   </head>
 
   <body>
@@ -18,7 +19,10 @@
         action="mailto:matricula@curso.pt"
         onSubmit="return validar(document.CursoIdiomas)"
       >
-        <h1 class="title">Matrícula no Curso Idiomas</h1>
+        <div class="form-header">
+          <h1 class="title">Matrícula no Curso Idiomas</h1>
+          <img src="./logo.png" alt="UEA">  
+        </div>
         <div class="inline-group">
           <div class="item group">
             <label class="item-title"
@@ -57,7 +61,7 @@
           </div>
 
           <div class="item inline-group">
-            <label class="item-title">Bairro: </label>
+            <label class="item-title">Bairro:</label>
             <input
               class="textfield"
               placeholder="Ex: Bairro Da Paz"
@@ -96,7 +100,7 @@
                 type="text"
                 name="matricula"
               />
-          </div>
+            </div>
         </div>
 
         <div class="inline-group button-group">
@@ -111,7 +115,13 @@
             type="button"
             value="Importar dados"
           />
-          <input class="button outlined" id="buttonSaveFile" type="button" value="Fazer download" onclick="downloadFile(this.form)" />
+          <input 
+            class="button outlined" 
+            id="buttonSaveFile" 
+            type="button" 
+            value="Fazer download" 
+            onclick="downloadFile(this.form)" 
+          />
           <input type="file" id="fileUpload" accept="text/plain" />
           <input class="button primary" type="submit" value="Enviar"/>
         </div>
